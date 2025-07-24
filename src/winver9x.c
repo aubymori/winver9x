@@ -31,6 +31,7 @@ INT_PTR CALLBACK WinverDlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
 			if (hKey)
 			{
 				RegQueryValueEx(hKey, TEXT("Mode"), NULL, NULL, &dwMode, &cbMode);
+				RegCloseKey(hKey);
 			}
 
 			if (dwMode >= WV9XM_COUNT)
