@@ -67,10 +67,10 @@ int wmain(int argc, wchar_t *argv[])
 		pNtHead->OptionalHeader.MinorSubsystemVersion
 	);
 
-	pNtHead->OptionalHeader.MajorOperatingSystemVersion = 4;
-	pNtHead->OptionalHeader.MinorOperatingSystemVersion = 0;
-	pNtHead->OptionalHeader.MajorSubsystemVersion       = 4;
-	pNtHead->OptionalHeader.MinorSubsystemVersion       = 0;
+	pNtHead->OptionalHeader.MajorOperatingSystemVersion =  3;
+	pNtHead->OptionalHeader.MinorOperatingSystemVersion = 10;
+	pNtHead->OptionalHeader.MajorSubsystemVersion       =  3;
+	pNtHead->OptionalHeader.MinorSubsystemVersion       = 10;
 
 	CloseHandle(hFile);
 	hFile = CreateFileW(argv[1], GENERIC_WRITE, NULL, NULL, OPEN_EXISTING, NULL, NULL);
